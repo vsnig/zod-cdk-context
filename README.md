@@ -3,8 +3,8 @@ Get and validate [AWS CDK](https://aws.amazon.com/cdk/) context against [Zod](ht
 ```typescript
 // {foo: string; bar?: string; baz: number}
 const { foo, bar, baz } = getValidatedContext(app.node, {
-  foo: z.string(),
-  bar: z.string().optional(),
+  foo: z.string().min(1),
+  bar: z.string().min(1).optional(),
   baz: z.coerce.number(),
 })
 ```
