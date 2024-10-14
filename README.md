@@ -10,4 +10,4 @@ const {foo, bar, baz} = getValidatedContext(app.node, {
 })
 ```
 
-[Article](https://dev.to/snegostup/aws-cdk-context-validation-4ej) with implementation details
+[Article](https://dev.to/snegostup/aws-cdk-context-validation-4ej) with some implementation details
