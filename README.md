@@ -9,3 +9,5 @@ const {foo, bar, baz} = getValidatedContext(app.node, {
   baz: z.coerce.number(),
 })
 ```
+
+[Article](https://dev.to/snegostup/aws-cdk-context-validation-4ej) with implementation details
