@@ -6,7 +6,11 @@ export { z } from 'zod'
 
 export const getValidatedContext = <
   T extends {
-    [key: string]: z.ZodString | z.ZodNumber | z.ZodOptional<z.ZodString | z.ZodNumber>
+    [key: string]:
+      | z.ZodString
+      | z.ZodNumber
+      | z.ZodOptional<z.ZodString | z.ZodNumber>
+      | z.ZodEnum<[string, ...string[]]>
   },
 >(
   node: Node,

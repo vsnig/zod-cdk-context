@@ -27,4 +27,13 @@ describe('validated context', () => {
     const app = new cdk.App({ context: {} })
     expect(() => getValidatedContext(app.node, { buzz: z.string() })).toThrow()
   })
+
+  test('enum of strings', () => {
+    const app = new cdk.App({ context: { stage: 'prd' } })
+
+    expect(getValidatedContext(app.node, { stage: z.enum(['prd', 'dev']) })).toEqual({
+      stage: 'prd',
+    })
+    expect(() => getValidatedContext(app.node, { stage: z.enum(['foo']) })).toThrow()
+  })
 })
