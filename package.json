@@ -1,7 +1,12 @@
 {
   "name": "zod-cdk-context",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Validate AWS CDK context with Zod",
+  "homepage": "https://github.com/vsnig/zod-cdk-context",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vsnig/zod-cdk-context.git"
+  },
   "author": "Viacheslav Snizhko",
   "type": "module",
   "main": "dist/index.js",
