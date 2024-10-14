@@ -1,6 +1,6 @@
 {
   "name": "zod-cdk-context",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Validate AWS CDK context with Zod",
   "keywords": [
     "zod",
