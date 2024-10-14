@@ -1,5 +1,5 @@
 
-Get and validate AWS CDK context against Zod schema. Get typed, validated context as a result, or error will be thrown.
+Get and validate [AWS CDK](https://aws.amazon.com/cdk/) context against [Zod](https://zod.dev/) schema. Get typed, validated context as a result, or error will be thrown.
 
 ```typescript
 // {foo: string; bar?: string; baz: number}
