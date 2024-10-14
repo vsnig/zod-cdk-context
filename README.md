@@ -1,6 +1,8 @@
 Get and validate [AWS CDK](https://aws.amazon.com/cdk/) context against [Zod](https://zod.dev/) schema. Get typed, validated context as a result, or error will be thrown.
 
 ```typescript
+import { getValidatedContext, z } from 'zod-cdk-context'
+
 // {foo: string; bar?: string; baz: number}
 const { foo, bar, baz } = getValidatedContext(app.node, {
   foo: z.string().min(1),

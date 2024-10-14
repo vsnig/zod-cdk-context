@@ -2,6 +2,8 @@ import type { Node } from 'constructs'
 
 import { z } from 'zod'
 
+export { z } from 'zod'
+
 export const getValidatedContext = <
   T extends {
     [key: string]: z.ZodString | z.ZodNumber | z.ZodOptional<z.ZodString | z.ZodNumber>

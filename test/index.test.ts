@@ -1,8 +1,7 @@
 import * as cdk from 'aws-cdk-lib'
 import { describe, expect, test } from 'vitest'
-import { z } from 'zod'
 
-import { getValidatedContext } from '../src/index.js'
+import { getValidatedContext, z } from '../src/index.js'
 
 describe('validated context', () => {
   test('get string context value', () => {
