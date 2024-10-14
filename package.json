@@ -24,11 +24,15 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "test": "vitest"
+    "format:check": "npx prettier . --check --cache",
+    "format:fix": "npx prettier . --write",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "validate": "run-p typecheck format:check"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test",
+      "pre-commit": "npm run validate",
       "pre-push": "npm run test"
     }
   },
@@ -36,6 +40,8 @@
     "@tsconfig/node20": "^20.1.4",
     "aws-cdk-lib": "^2.162.1",
     "husky": "^4.3.8",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
     "typescript": "^5.6.3",
     "vitest": "^1.6.0"
   },
