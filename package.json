@@ -14,9 +14,16 @@
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test"
+    }
+  },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "aws-cdk-lib": "^2.162.1",
+    "husky": "^4.3.8",
     "typescript": "^5.6.3",
     "vitest": "^1.6.0"
   },
