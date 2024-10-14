@@ -17,6 +17,7 @@ jobs:
     permissions:
       packages: write
       contents: read
+      id-token: write
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
@@ -26,6 +27,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -37,6 +39,6 @@ jobs:
         run: npm run build
 
       - name: Publish 📦
-        run: npm publish
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
