@@ -3,11 +3,17 @@ Get and validate [AWS CDK](https://aws.amazon.com/cdk/) context against [Zod](ht
 ```typescript
 import { getValidatedContext, z } from 'zod-cdk-context'
 
-// {foo: string; bar?: string; baz: number}
-const { foo, bar, baz } = getValidatedContext(app.node, {
+// {
+//   foo: string;
+//   bar?: string;
+//   baz: number;
+//   env: "prd" | "dev"
+// }
+const { foo, bar, baz, env } = getValidatedContext(app.node, {
   foo: z.string().min(1),
   bar: z.string().min(1).optional(),
   baz: z.coerce.number(),
+  env: z.enum(['prd', 'dev']),
 })
 ```
 
