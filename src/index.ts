@@ -4,7 +4,7 @@ import { z, type ZodRawShape } from 'zod'
 
 export { z } from 'zod'
 
-export const getValidatedContext = <T extends ZodRawShape>(
+export const parseContext = <T extends ZodRawShape>(
   node: Node,
   schemaObject: T,
 ): z.infer<z.ZodObject<T>> => {
