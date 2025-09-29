@@ -32,7 +32,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run validate && npm run test"
+      "pre-commit": "npm run validate && npm run test",
+      "zod": "^4.1.11"
     }
   },
   "devDependencies": {
@@ -45,7 +46,6 @@
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
-    "constructs": "^10.0.0",
-    "zod": "^3.25.0"
+    "constructs": "^10.0.0"
   }
 }
