@@ -1,6 +1,6 @@
 {
   "name": "zod-cdk-context",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Validate AWS CDK context with Zod",
   "keywords": [
     "zod",
@@ -32,9 +32,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run validate && npm run test",
-      "zod": "^4.1.11"
+      "pre-commit": "npm run validate && npm run test"
     }
+  },
+  "dependencies": {
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
