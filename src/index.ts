@@ -1,8 +1,8 @@
 import type { Node } from 'constructs'
 
-import { z, type ZodRawShape } from 'zod'
+import { z, type ZodRawShape } from 'zod/v4'
 
-export { z } from 'zod'
+export { z } from 'zod/v4'
 
 export const parseContext = <T extends ZodRawShape>(
   node: Node,

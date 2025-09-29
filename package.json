@@ -35,9 +35,6 @@
       "pre-commit": "npm run validate && npm run test"
     }
   },
-  "dependencies": {
-    "zod": "^4.1.11"
-  },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "aws-cdk-lib": "^2.162.1",
@@ -48,6 +45,7 @@
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
-    "constructs": "^10.0.0"
+    "constructs": "^10.0.0",
+    "zod": "^3.25.0"
   }
 }
