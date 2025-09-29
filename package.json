@@ -1,6 +1,6 @@
 {
   "name": "zod-cdk-context",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Validate AWS CDK context with Zod",
   "keywords": [
     "zod",
@@ -46,6 +46,6 @@
   },
   "peerDependencies": {
     "constructs": "^10.0.0",
-    "zod": "^4"
+    "zod": "^3.25.0"
   }
 }
